@@ -6,7 +6,7 @@ const person = reactive({
     firstName: '',
     lastName: ''
 })
-function sayHello() {
+function sayHello(e) {
     person.firstName = document.getElementById("firstName").value
     person.lastName = document.getElementById("lastName").value
 }
@@ -22,15 +22,28 @@ function increment(){
     counter.value++
 }
 
+function changeFirstName(e){
+    e.preventDefault()
+    person.firstName = e.target.value
+
+}
+
+function changeLastName(e){
+    e.preventDefault()
+    person.lastName = e.target.value
+}
+
 </script>
 
 <template>
     <div>
-        <button @click="increment">Counter : {{ counter }}</button> <br>
-        <input placeholder="First Name" type="text" id="firstName"> <br>
-        <input placeholder="Last Name" type="text" id="lastName"> <br>
-
-        <button @click="sayHello">Say Hello</button>
-        <h2>Hello {{ fullName }}</h2>
+        <form>
+            <button @click="counter++">Counter : {{ counter }}</button> <br>
+            <input @input="changeFirstName" placeholder="First Name" type="text" id="firstName"> <br>
+            <input @input="changeLastName" placeholder="Last Name" type="text" id="lastName"> <br>
+            
+            <button @click.prevent="sayHello">Say Hello</button>
+            <h2>Hello {{ fullName }}</h2>
+        </form>
     </div>
 </template>
