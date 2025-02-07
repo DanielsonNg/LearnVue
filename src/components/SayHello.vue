@@ -12,7 +12,7 @@ function sayHello() {
 }
 
 const fullName = computed((prevVal)=> {
-    console.log(prevVal)
+    console.log(prevVal) 
     console.log('Fullname called')
     return `${person.firstName} ${person.lastName}`
 }) 
