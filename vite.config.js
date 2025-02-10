@@ -12,7 +12,8 @@ export default defineConfig({
         counter: "counter.html",
         style:"style.html",
         score:"score.html",
-        product:"product.html"
+        product:"product.html",
+        note:"note.html"
       }
     }
   }
