@@ -11,7 +11,8 @@ export default defineConfig({
         hello: "hello.html",
         counter: "counter.html",
         style:"style.html",
-        score:"score.html"
+        score:"score.html",
+        product:"product.html"
       }
     }
   }
