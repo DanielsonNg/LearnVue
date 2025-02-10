@@ -14,7 +14,8 @@ export default defineConfig({
         score:"score.html",
         product:"product.html",
         note:"note.html",
-        button:"button.html"
+        button:"button.html",
+        home: "home.html"
       }
     }
   }
