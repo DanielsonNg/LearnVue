@@ -13,7 +13,8 @@ export default defineConfig({
         style:"style.html",
         score:"score.html",
         product:"product.html",
-        note:"note.html"
+        note:"note.html",
+        button:"button.html"
       }
     }
   }
