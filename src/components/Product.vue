@@ -1,5 +1,6 @@
 <script setup>
 import { onWatcherCleanup, ref, watch, watchEffect } from 'vue';
+import ProductDetail from './ProductDetail.vue';
 
 const productId = ref("product2")
 const product = ref(null)
@@ -32,9 +33,11 @@ watchEffect(async()=>{
     </label>
     <div v-if="product">
         <h1>Product</h1>
-        <p>Id: {{ product.id }}</p>
-        <p>Name: {{product.name }}</p>
-        <p>Description: {{ product.description }}</p>
+        <ProductDetail 
+        :id="product.id"
+        :price="product.price"
+        :name="product.name"
+        />
     </div>
 </template>
 
