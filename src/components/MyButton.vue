@@ -2,7 +2,7 @@
 import { useAttrs } from 'vue';
 
     const attributes = useAttrs()
-    console.log(attributes)
+    // console.log(attributes)
 </script>
 
 <template>

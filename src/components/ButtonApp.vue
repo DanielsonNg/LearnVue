@@ -1,19 +1,30 @@
 <script setup>
+import Container from './Container.vue';
 import MyButton from './MyButton.vue';
 
 
-function clickHandler(){
+function clickHandler() {
     alert("clicked")
 }
 
 </script>
 
 <template>
-    <MyButton class="button" @click="clickHandler" name="test" />
+    <Container title="Penggunaan Container dengan <slot/>">
+        <template #header>
+            <h1>Button App</h1>
+        </template>
+        <template #default>
+            <MyButton class="button" @click="clickHandler" name="test" />
+        </template>
+        <template #footer>
+            <p>@Copycat 2025</p>
+        </template>
+    </Container>
 </template>
 
 <style scoped>
-.button:hover{
+.button:hover {
     background-color: aqua;
 }
 </style>
